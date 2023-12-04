@@ -1,5 +1,4 @@
 export interface UserLdap {
-   // filter(arg0: (user: any) => boolean): UserLdap[];
     login: string;
     nom: string;
     prenom: string;
