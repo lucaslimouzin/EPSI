@@ -13,6 +13,15 @@ import { UsersService } from '../service/users.service';
   styleUrls: ['./ldap-list.component.css']
 })
 export class LdapListComponent implements OnInit {
+
+  edit(login: string): void {
+    this.router.navigate(['user', login]).then((e: boolean) => {
+      if (!e) {
+        console.error('Navigation has failed!');
+      }
+    });
+  }
+
   displayedColumns: string[] = ['nomComplet', 'mail', 'employeNumero'];
   dataSource: MatTableDataSource<UserLdap> = new MatTableDataSource<UserLdap>([]);
 
@@ -34,14 +43,18 @@ export class LdapListComponent implements OnInit {
   }
 
   private getUsers(): void {
-    this.usersService.getUsers('').subscribe(
+    this.usersService.getUser('').subscribe(
       user => {
-        if (this.unactiveSelected) {
-          this.dataSource.data = user.filter(user => user.active === false);
+        if (user && Array.isArray(user)) {
+          if (this.unactiveSelected) {
+            this.dataSource.data = user.filter(u => u.active === false);
+          } else {
+            this.dataSource.data = user;
+          }
+          this.applyFilter({ target: { value: this.dataSource.filter } } as unknown as Event);
         } else {
-          this.dataSource.data = user;
+          console.warn('User not found or not an array');
         }
-        this.applyFilter({ target: { value: this.dataSource.filter } } as unknown as Event);
       },
       error => {
         console.error(error);

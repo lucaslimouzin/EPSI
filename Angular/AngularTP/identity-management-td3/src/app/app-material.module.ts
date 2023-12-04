@@ -12,6 +12,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle'; 
 import { MatInputModule } from '@angular/material/input'; 
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 @NgModule({
   exports: [
@@ -27,6 +28,7 @@ import { MatInputModule } from '@angular/material/input';
     MatFormFieldModule,
     MatSlideToggleModule,
     MatInputModule, 
+    MatTooltipModule,
   ]
 })
 export class AppMaterialModule { }

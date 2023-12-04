@@ -12,10 +12,10 @@ export class UsersService {
 
   constructor() { }
 
-  getUsers(login: string): Observable<UserLdap[]> {
+  getUser(login: string): Observable<UserLdap | undefined> {
     const user: UserLdap | undefined = this.users.find(user => user.login === login);
     if (user !== undefined)
-      return of([user]);
+      return of(user);
     return throwError(() => new Error('Utilisateur non trouvé'));
   }
 }
