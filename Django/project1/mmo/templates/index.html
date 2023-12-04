@@ -1,0 +1,15 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>Local Mmo Home</h1>
+  <p>
+    Welcome to LocalMmo, a website developed by
+    <em>Givros</em>!
+  </p>
+  <h2>Dynamic content</h2>
+  <p>The library has the following record counts:</p>
+  <ul>
+    <li><strong>Jeux:</strong> {{ num_jeux }}</li>
+    <li><strong>Studios:</strong> {{ num_studios }}</li>
+  </ul>
+{% endblock %}

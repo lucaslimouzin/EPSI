@@ -1,0 +1,17 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>Jeux List</h1>
+  {% if jeux_list %}
+    <ul>
+      {% for jeux in jeux_list %}
+      <li>
+        <a href="{{ jeux.get_absolute_url }}">{{ jeux.title }}</a>
+        ({{jeux.author}})
+      </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>There are no jeux in the library.</p>
+  {% endif %}
+{% endblock %}
