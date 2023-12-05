@@ -24,7 +24,7 @@ def index(request):
 
 class JeuxListView(generic.ListView):
     model = Jeux
-    context_object_name = 'jeu_list' #your own name for the list as a template variable
+    context_object_name = 'jeux_list' #your own name for the list as a template variable
     template_name = 'jeux/my_arbitrary_template_name_list.html'
 
     def get_context_data(self, **kwargs):
@@ -34,3 +34,5 @@ class JeuxListView(generic.ListView):
         context['some_data'] = 'This is just some data'
         return context
     
+class JeuxDetailView(generic.DetailView):
+    model = Jeux

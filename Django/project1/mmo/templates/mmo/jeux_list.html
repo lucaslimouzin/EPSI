@@ -4,10 +4,11 @@
   <h1>Jeux List</h1>
   {% if jeux_list %}
     <ul>
-      {% for jeux in jeux_list %}
+      {% for jeuxData in jeux_list %}
       <li>
-        <a href="{{ jeux.get_absolute_url }}">{{ jeux.title }}</a>
-        ({{jeux.author}})
+        
+        <a href="">{{ jeuxData.title }}</a>
+        ({{jeuxData.studio}})
       </li>
       {% endfor %}
     </ul>
