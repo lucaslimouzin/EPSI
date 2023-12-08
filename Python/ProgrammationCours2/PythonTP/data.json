@@ -1,0 +1,35 @@
+[
+    {
+        "id": "907223491879",
+        "nom": "Constitution du canton de Berne",
+        "abreviation": "(ConstC[1])",
+        "url": "https://www.belex.sites.be.ch/app/fr/texts_of_law/101.1",
+        "numero_rs": "101.1",
+        "provenance": "",
+        "fondement": "Dans l'intention de protéger la liberté et le droit et d'aménager une collectivité dans laquelle tous vivent solidairement et sont conscients de leur responsabilité envers la création,",
+        "date_entree_en_vigueur": "06.06.1993",
+        "file_path": "data/907223491879.txt"
+    },
+    {
+        "id": "523486096730",
+        "nom": "Ordonnance sur les mesures urgentes destinées à maîtriser la crise du coronavirus *",
+        "abreviation": "(OCCV)",
+        "url": "https://www.belex.sites.be.ch/app/fr/texts_of_law/101.2",
+        "numero_rs": "101.2",
+        "provenance": "Le Conseil-exécutif du canton de Berne,",
+        "fondement": "vu l'article 91, alinéa 1 de la Constitution cantonale (ConstC)[1],\nsur proposition de la Chancellerie d'Etat,",
+        "date_entree_en_vigueur": "20.03.2020",
+        "file_path": "data/523486096730.txt"
+    },
+    {
+        "id": "508332337421",
+        "nom": "Ordonnance sur les mesures destinées à maîtriser la crise du coronavirus dans le secteur sanitaire",
+        "abreviation": "(OCCVS)",
+        "url": "https://www.belex.sites.be.ch/app/fr/texts_of_law/101.3",
+        "numero_rs": "101.3",
+        "provenance": "Le Conseil-exécutif du canton de Berne,",
+        "fondement": "vu l'article 91, alinéa 1 de la Constitution cantonale (ConstC)[1] et l'article 80 de la loi cantonale du 19 mars 2014 sur la protection de la population et sur la protection civile (LCPPCi)[2],\nsur proposition de la Direction de la santé, des affaires sociales et de l'intégration,",
+        "date_entree_en_vigueur": "26.03.2020",
+        "file_path": "data/508332337421.txt"
+    }
+]
