@@ -1,0 +1,147 @@
+/* Styles pour le fond de la page */
+body {
+  overflow: hidden; /* Empêche le défilement de la page */
+  background-color: #d1dcdd; /* Couleur de fond bleue */
+  margin: 0; /* Supprime les marges par défaut du corps */
+  padding: 0; /* Supprime le rembourrage par défaut du corps */
+  padding-bottom: 100px;
+}
+.App {
+  margin-bottom: 100px;
+}
+
+#modal-text {
+  font-family: "Roboto", sans-serif;
+  font-size: 20px; /* Taille de la police du texte */
+  font-weight: bold; /* Gras */
+  text-transform: uppercase; /* Majuscules */
+  color: #040078;
+}
+#score-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2424a4; /* Couleur de fond bleue */
+  border-radius: 10px; /* Coins arrondis */
+  padding: 20px; /* Espacement interne */
+  color: white; /* Couleur du texte */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Ombre légère */
+  margin-bottom: 20px; /* Marge en bas */
+}
+
+#score-element {
+  font-family: "Roboto", sans-serif;
+  font-size: 24px; /* Taille de la police du titre */
+  font-weight: bold; /* Gras */
+  text-transform: uppercase; /* Majuscules */
+}
+
+#game-title {
+  font-family: "Roboto", sans-serif;
+  font-size: 24px; /* Taille de la police du titre */
+  font-weight: bold; /* Gras */
+  text-transform: uppercase; /* Majuscules */
+}
+
+#quit-button {
+  font-family: "Roboto", sans-serif;
+  font-size: 20px; /* Taille de la police du bouton quitter */
+  font-weight: bold; /* Gras */
+  text-transform: uppercase; /* Majuscules */
+}
+
+#game-image {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.center-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Styles pour la fenêtre modale */
+.modal {
+  display: none; /* Masque la fenêtre modale par défaut */
+  position: fixed; /* Position fixe */
+  z-index: 1; /* Positionne la fenêtre modale au-dessus du reste du contenu */
+  left: 0;
+  top: 0;
+  width: 100%; /* Largeur pleine page */
+  height: 100%; /* Hauteur pleine page */
+  overflow: auto; /* Active le défilement si la hauteur de la fenêtre modale dépasse la hauteur de la page */
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.4
+  ); /* Couleur de fond noire avec un peu de transparence */
+  padding-top: 60px; /* Marge en haut */
+}
+
+.modal-content {
+  max-width: 400px;
+  background-color: #040078; /* Couleur de fond bleue plus foncée */
+  border-radius: 10px;
+  padding: 20px;
+  color: white; /* Couleur du texte */
+  text-align: center;
+  position: relative;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  font-family: sans-serif; /* Police sans-serif */
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 10px;
+  cursor: pointer;
+  color: white;
+  font-size: 24px;
+}
+
+/* Transition pour afficher en douceur la fenêtre modale */
+.modal.show {
+  display: block;
+  opacity: 1; /* Affiche la fenêtre modale avec une opacité de 1 */
+  pointer-events: auto; /* Permet les interactions avec la fenêtre modale visible */
+}
+
+/* Styles pour les zones cliquables */
+.clickable-area {
+  position: absolute;
+  cursor: pointer;
+}
+.modal-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  max-width: 80%;
+  overflow-y: auto;
+  position: relative;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 24px;
+}

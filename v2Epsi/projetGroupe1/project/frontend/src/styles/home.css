@@ -1,0 +1,30 @@
+#container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: #f5f5f5;
+}
+
+#workSpaceImg {
+  object-fit: cover;
+  object-position: center;
+  border-radius: 20px;
+  margin-bottom: 25px;
+}
+
+#titleWork {
+  font-size: 25px;
+  font-weight: bold;
+  color: #3f3d56;
+  text-align: center;
+}
+
+#subtitleWork {
+  font-size: 20px;
+  font-weight: bold;
+  color: #3f3d56;
+  text-align: center;
+}

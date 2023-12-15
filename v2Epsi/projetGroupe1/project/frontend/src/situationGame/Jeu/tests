@@ -1,0 +1,45 @@
+</--545 294, 569 438      709 483 836 651      365 597 484 798       1136 184 1246 335* -->
+// Récupérer les éléments DOM
+const scoreElement = document.getElementById("score");
+const modal = document.getElementById("modal");
+const modalMessage = document.getElementById("modal-message");
+const closeButton = document.querySelector(".close");
+
+// Score initial
+let score = 0;
+
+const zonesCliques = {};
+
+const messages = {
+    message1: "Bien joué. \nEn effet cette situation n'est pas appropriée",
+    message2: "Concentre toi"
+};
+
+// Événement au clic sur une zone cliquable
+document.addEventListener("click", (e) => {
+    if (e.target.tagName === "AREA") {
+        const zoneId = e.target.getAttribute("data-id");
+        if (!zonesCliques[zoneId]) {
+          // Récupérer le message de la zone cliquée
+          const message = e.target.getAttribute("data-message-key");
+          showModal(messages[message]);
+          // Incrémenter le score
+          score++;
+          scoreElement.textContent = score;
+
+          // Marquer la zone comme cliquée
+          zonesCliques[zoneId] = true;
+        }
+    }
+});
+
+// Afficher la fenêtre modale avec le message
+function showModal(message) {
+    modalMessage.textContent = message;
+    modal.style.display = "block";
+}
+
+// Fermer la fenêtre modale
+closeButton.addEventListener("click", () => {
+    modal.style.display = "none";
+});
